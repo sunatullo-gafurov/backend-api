@@ -28,6 +28,7 @@ app.post('/api/posts', (req, res) => {
         return;
     } else {
         posts = posts.map(i => i.id === body.id ? {...i, name: body.name} : i);
+        res.send(posts);
         return;
     }
 });
